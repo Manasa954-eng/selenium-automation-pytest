@@ -1,22 +1,23 @@
-# 🧪 Selenium Automation Framework (Python | Pytest | Data-Driven)
+# 🧪 Selenium Automation Framework (Python | Pytest | POM | Data-Driven)
 
 ## 📌 Project Overview
-This project demonstrates my hands-on learning in Selenium automation using Python.
+This project demonstrates my hands-on learning and implementation of a scalable Selenium automation framework using Python.
 
-It starts with a basic Selenium script and evolves into a structured Pytest-based framework, showcasing the transition from simple scripting to scalable test automation.
+It started with a basic Selenium script, evolved into a Pytest-based structure, and is now enhanced with the Page Object Model (POM) design pattern for better maintainability, reusability, and scalability.
 
 ---
 
 ## 🚀 Key Highlights
 - End-to-end UI automation using Selenium WebDriver
+- Implementation of Page Object Model (POM)
 - Data-driven testing using JSON inputs
-- Implementation of Pytest framework
+- Structured test execution using Pytest
 - Use of parameterization and assertions
 - Real-world e-commerce workflow automation
 
 ---
 
-## 🧠 Learning Approach
+## 🧠 Learning & Implementation Journey
 
 ### 🔹 Step 1: Basic Automation (`Project1.py`)
 - Developed a basic Selenium script
@@ -28,9 +29,15 @@ It starts with a basic Selenium script and evolves into a structured Pytest-base
 - Implemented:
   - `@pytest.mark.parametrize` for data-driven testing
   - Assertions for validation
-- Improved code maintainability and reusability
+- Improved test structure and readability
 
-👉 This demonstrates my progression from basic scripting to structured automation testing.
+### 🔹 Step 3: Page Object Model (POM) (`POM_Project1/`)
+- Separated page logic into individual classes
+- Created reusable methods for each page
+- Improved maintainability and scalability of test code
+- Reduced code duplication
+
+👉 This demonstrates progression from basic scripting → structured testing → scalable framework design.
 
 ---
 
@@ -43,6 +50,20 @@ It starts with a basic Selenium script and evolves into a structured Pytest-base
 
 ---
 
+## 🏗 Framework Design (POM)
+
+- `LoginPage` → Handles login functionality  
+- `ProductsPage` → Handles product selection  
+- `CartPage` → Handles cart validation  
+- `CheckoutPage` → Handles checkout process  
+
+👉 Each page contains:
+- Locators
+- Actions (methods)
+- Reusable logic
+
+---
+
 ## 🛠 Tech Stack
 - Python
 - Selenium WebDriver
@@ -52,14 +73,19 @@ It starts with a basic Selenium script and evolves into a structured Pytest-base
 ---
 
 ## 📂 Project Structure
-
 Practice/
 │
 ├── Project1.py # Basic Selenium script
 ├── test_project1.py # Pytest implementation
-├── test_Project.json # Test data (JSON)
+├── test_data.json # Test data (JSON)
 ├── conftest.py # Pytest fixtures
-└── POM_Project1/ # Work in progress (POM structure)
+│
+└── POM_Project1/
+├── a_login_page.py
+├── b_products.py
+├── c_cart_page.py
+├── d_checkout_page.py
+└── test_project1_POM.py
 
 
 ---
@@ -71,20 +97,24 @@ Practice/
 pip install selenium pytest
 
 
-### 🔹 Run tests
+### 🔹 Run all tests
 
 pytest
+
+
+### 🔹 Run POM test specifically
+
+pytest POM_Project1/test_project1_POM.py
 
 
 ---
 
 ## 📈 Future Enhancements
-- Implement Page Object Model (POM)
-- Add logging and reporting
-- Improve locator strategies
+- Add logging framework
+- Integrate test reporting (Allure / HTML reports)
+- Improve locator strategies (more robust selectors)
 - Integrate CI/CD using GitHub Actions
 
 ---
-
 ## 💡 Note
-This project reflects my hands-on learning and progression in automation testing, focusing on writing clean, maintainable, and scalable test code.
+This project reflects my practical learning and progression in automation testing, focusing on writing clean, maintainable, and scalable test frameworks using industry best practices.
